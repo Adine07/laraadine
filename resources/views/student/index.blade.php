@@ -22,6 +22,7 @@
 			<th>majors</th>
 			<th>height</th>
 			<th>weight</th>
+			<th>photo</th>
 			<th>action</th>
 		</tr>
 	</thead>
@@ -38,6 +39,7 @@
 			<td>{{ $student->majors }}</td>
 			<td>{{ $student->height }}</td>
 			<td>{{ $student->weight }}</td>
+			<td><img src="/img/{{ $student->photo }}" class="img-fluid" alt=""></td>
 			<td>
 				<a href="/students/edit/{{$student->id}}">Edit </a>
 				<form action="/students/delete/{{$student->id}}" method="post">

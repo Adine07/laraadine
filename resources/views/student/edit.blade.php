@@ -4,7 +4,7 @@
 
 @section('content')
 
-<form action="/students/update/{{ $student->id }}" method="post">
+<form action="/students/update/{{ $student->id }}" method="post" enctype="multipart/form-data">
 	@csrf
 	@method('PUT')
 
@@ -88,6 +88,12 @@
 		<input type="number" name="weight" value="{{ $student->weight }}">
 	</label>
 	<br>
+
+	<label>
+        Photo
+        <input type="file" name="photo_file" accept="image/*">
+    </label>
+    <br>
 
 	<button>SUBMIT</button>
 
